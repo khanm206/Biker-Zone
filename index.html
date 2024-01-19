@@ -9,14 +9,38 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'btn-clr': '#FFD700',
+                        'div-clr':'#673D50',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
 </head>
 
-<body>
-    <header>
+<body class="font-poppins">
+    <header >
         <nav>
-            <div class="navbar bg-[#447285] text-white">
-                <div class="navbar-start">
-                    <div class="dropdown">
+            <div class="navbar bg-[#00000005] text-black">
+                <div class="flex-1">
+                    <div class="dropdown ">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -25,7 +49,7 @@
                             </svg>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
                             <li><a>Home</a></li>
                             <li><a>Shop</a></li>
                             <li><a>News</a></li>
@@ -33,25 +57,173 @@
 
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl"><img class="w-8" src="images/icons/logo.svg" alt="">Biker <span class="text-[#FFD700]">Zone</span></a>
+                    <a class="btn btn-ghost text-2xl font-bold lg:text-4xl"><img class="w-10 h-auto lg:w-12"
+                            src="images/icons/logo.svg" alt=""><span class="text-div-clr">Biker</span> <span
+                            class="text-[#FFD700] ">Zone</span></a>
                 </div>
                 <div class="navbar-center hidden lg:flex ">
-                    <ul class="menu menu-horizontal px-1">
+                    <ul class="text-lg menu menu-horizontal px-1">
                         <li><a>Home</a></li>
                         <li><a>Shop</a></li>
                         <li><a>News</a></li>
                         <li><a>Contact</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end">
-                    <a class="btn border-none bg-[#FFD700]">Login</a>
+                <div class="">
+                    <a class="btn border-none bg-btn-clr lg:text-xl">Login</a>
                 </div>
             </div>
         </nav>
+
+        <div class="md:container md:mx-auto bg-div-clr rounded-xl lg:mt-16 h-auto lg:h-96 lg:p-0 p-4">
+
+            <div class=" carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full h-auto lg:h-96">
+                    <div class="flex flex-col-reverse  lg:flex-row justify-center items-center">
+                        <div class="lg:w-1/2 h-auto text-white">
+                            <h3 class="lg:text-6xl font-bold md:text-3xl">Kawasaki Z900RS Cafe 2020</h3>
+                            <br>
+                            <p class="lg:text-base font-light">
+                                The Kawasaki Z900RS Cafe 2020 is a retro-inspired motorcycle, blending classic design with modern performance. With a powerful 948cc engine, it delivers a thrilling ride, while the cafe racer styling exudes timeless charm.
+                            </p> <br>
+                            <a class="btn border-none bg-btn-clr lg:text-xl">Purchase</a>
+                        </div>
+
+                        <img class=" lg:h-max  h-auto lg:w-auto w-[350px] md:w-[400px] pb-3" src="images/slider/bike1.png" class="w-full"/>
+                    </div>
+
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle bg-[#ffffff1a]">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-[#ffffff1a]">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full h-auto lg:h-96">
+                    <div class="flex flex-col-reverse  lg:flex-row justify-center items-center">
+                        <div class="lg:w-1/2 h-auto text-white">
+                            <h3 class="lg:text-6xl font-bold md:text-3xl">Ducati 848</h3>
+                            <br>
+                            <p class="lg:text-base font-light">The Ducati 848 is a high-performance sport motorcycle known for its sleek design, powerful 849cc engine, precise handling, and advanced technology, offering an exhilarating riding experience for enthusiasts.
+                            </p> <br>
+                            <a class="btn border-none bg-btn-clr lg:text-xl">Purchase</a>
+                        </div>
+
+                        <img class=" lg:h-max  h-auto lg:w-auto" src="images/slider/bike2.png" class="w-full"/>
+                    </div>
+
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-[#ffffff1a]">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-[#ffffff1a]">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full h-auto lg:h-96">
+                    <div class="flex flex-col-reverse  lg:flex-row justify-center items-center">
+                        <div class="lg:w-1/2 h-auto text-white">
+                            <h3 class="lg:text-6xl font-bold md:text-3xl">Triumph Daytona 675</h3>
+                            <br>
+                            <p class="lg:text-base font-light">The Triumph Daytona 675 is a sporty, agile motorcycle featuring a 675cc three-cylinder engine, distinctive design, and advanced suspension. Known for its thrilling performance, it's a popular choice among enthusiasts.
+                            </p> <br>
+                            <a class="btn border-none bg-btn-clr lg:text-xl">Purchase</a>
+                        </div>
+
+                        <img class=" lg:h-max  h-auto lg:w-auto" src="images/slider/bike3.png" class="w-full"/>
+                    </div>
+
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-[#ffffff1a]">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-[#ffffff1a]">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full h-auto lg:h-96">
+                    <div class="flex flex-col-reverse  lg:flex-row justify-center items-center">
+                        <div class="lg:w-1/2 h-auto text-white">
+                            <h3 class="lg:text-6xl font-bold md:text-3xl">Harley-Davidson LiveWire</h3>
+                            <br>
+                            <p class="lg:text-base font-light">
+                                The Harley-Davidson LiveWire is an electric motorcycle, combining iconic Harley styling with cutting-edge technology. It offers thrilling performance, instant torque, and a sleek design, redefining the classic motorcycle experience.
+                            </p> <br>
+                            <a class="btn border-none bg-btn-clr lg:text-xl">Purchase</a>
+                        </div>
+
+                        <img class=" lg:h-max  h-auto lg:w-auto" src="images/slider/bike4.png" class="w-full"/>
+                    </div>
+
+
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-[#ffffff1a]">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-[#ffffff1a]">❯</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </header>
 
-    <main>
+    <main class="md:container md:mx-auto">
 
+       <section class="mt-20 lg:mt-40">
+<div class="text-center">
+    <h3 class="text-2xl lg:text-6xl md:text-4xl font-semibold">Featured Bikes In This Year</h3>
+    <p class="lg:text-2xl md:text-lg text-sm text-div-clr">Best bike collection</p>
+    <hr class=" w-[200px] ml-[25%] lg:w-[400px] lg:ml-[34.5%] md:w-[300px] md:ml-[31%]">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <img class="h-[420px] mt-[-70px]" src="images/others/bike1.png" alt="">
+    <img class="h-[310px]" src="images/others/bike2.png" alt="">
+
+    <img class="h-[350px] mt-[8px] lg:mt-[-10px] md:lg:mt-[-10px]" src="images/others/bike4.png" alt="">
+
+    <img class="h-[370px]" src="images/others/bike9.png" alt="">
+    <img class="h-[450px] mt-[-60px] md:mt-[-30px] lg:mt-[-30px]" src="images/others/bike10.png" alt="">
+
+    <img class="h-[400px] mt-[-80px] lg:mt-0 md:mt-0" src="images/others/bike12.png" alt="">
+</div>
+       </section>
+
+       <section class="mt-20 lg:mt-40">
+<h3 class="lg:text-6xl md:text-4xl text-2xl text-semibold text-center mb-9">Latest News</h3>
+<div class="lg:flex lg:justify-around grid md:grid-cols-2 md:gap-10 grid-cols-1 justify-items-center">
+
+    <div class="card w-96 bg-base-100 shadow-xl">
+        <figure><img src="images/others/latest1.png" alt="news" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">HARLEY-DAVIDSON CVO PAN AMERICA LOOKS TO BE IN THE WORKS</h2>
+          <p>
+            Harley-Davidson's upcoming CVO Pan America, revealed by the California Air Resources Board, appears to maintain the stock 1,252cc engine but is approximately 20kg heavier than the standard Pan America. Speculations suggest it might be an adventure or touring version with added accessories and luxurious detailing, typical of Custom Vehicle Operations (CVO) models.</p>
+          <div class="card-actions">
+            <button class="btn bg-btn-clr">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-96 bg-base-100 shadow-xl">
+        <figure><img src="images/others/latest2.png" alt="news" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">SHOTGUN 650 PRICING ANNOUNCED, AND IT’S A BARGAIN</h2>
+          <p>The Royal Enfield Shotgun 650, reviewed a month ago in LA, is now discussed for its UK pricing. The top-spec Stencil White variant is priced at £6,899, followed by the mid-spec Plasma Blue and Gree Drill at £6,799, with the base Sheetmetal Grey model costing £6,699, offering various options for prospective buyers.</p>
+          <div class="card-actions">
+            <button class="btn bg-btn-clr">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-96 bg-base-100 shadow-xl md:col-span-2">
+        <figure><img src="images/others/latest3.png" alt="news" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">SUZUKI GSX-S1000GX+ IS A TOURING-READY VERSION OF THE ‘LIFTED SUPERBIKE’</h2>
+          <p>
+            Suzuki introduces the GSX-S1000GX+, a variant of the recently launched crossover model, featuring standard panniers, similar to the GSX-S1000GT+. Priced at £15,599, it offers a £175 savings compared to buying the regular GX with panniers separately. The GX+ maintains the standard model's specs, including the K5 engine and semi-active suspension.</p>
+          <div class="card-actions">
+            <button class="btn bg-btn-clr">Read More</button>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+       </section>
 
     </main>
 
